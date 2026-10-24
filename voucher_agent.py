@@ -5,6 +5,8 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote_plus, urlparse
+from datetime import datetime, timezone, timedelta
+from email.utils import parsedate_to_datetime
 
 import feedparser
 import requests
@@ -88,6 +90,53 @@ def load_config():
 
 def load_state():
     return load_json(STATE_FILE, {"seen": []})
+
+def parse_published(entry):
+    """Extract a publication/update date from a feed entry."""
+    for key in ("published_parsed", "updated_parsed"):
+        value = entry.get(key)
+
+        if value:
+            try:
+                import calendar
+                return datetime.fromtimestamp(
+                    calendar.timegm(value),
+                    tz=timezone.utc
+                )
+            except (TypeError, ValueError, OverflowError):
+                pass
+
+    for key in ("published", "updated", "created", "date"):
+        value = entry.get(key)
+
+        if not value:
+            continue
+
+        try:
+            parsed = parsedate_to_datetime(value)
+
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+
+            return parsed.astimezone(timezone.utc)
+
+        except (TypeError, ValueError, OverflowError):
+            pass
+
+        try:
+            parsed = datetime.fromisoformat(
+                value.replace("Z", "+00:00")
+            )
+
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+
+            return parsed.astimezone(timezone.utc)
+
+        except (TypeError, ValueError, OverflowError):
+            pass
+
+    return None
 
 
 def search_google_news(query, max_results=30):
