@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "description": "Seed sources and search targets for the Microsoft certification voucher monitor. Results are leads, not confirmed offers.",
+  "settings": {
+    "language": "en-IN",
+    "country": "IN",
+    "max_results_per_source": 30,
+    "max_registry_examples_per_source": 5,
+    "max_candidate_sources": 500
+  },
+  "sources": [
+    {
+      "id": "gn_official_microsoft_vouchers",
+      "name": "Official Microsoft certification offers and vouchers",
+      "type": "google_news_query",
+      "category": "official",
+      "trust_tier": "official",
+      "query": "site:learn.microsoft.com/en-in/credentials OR site:learn.microsoft.com/credentials Microsoft certification exam voucher OR discount"
+    },
+    {
+      "id": "gn_microsoft_events",
+      "name": "Microsoft events and training campaigns",
+      "type": "google_news_query",
+      "category": "official_events",
+      "trust_tier": "official",
+      "query": "site:microsoft.com OR site:events.microsoft.com Microsoft certification training event voucher exam discount"
+    },
+    {
+      "id": "gn_microsoft_virtual_training",
+      "name": "Microsoft Virtual Training Days",
+      "type": "google_news_query",
+      "category": "official_events",
+      "trust_tier": "official",
+      "query": "Microsoft Virtual Training Days certification exam voucher discount 2026"
+    },
+    {
+      "id": "gn_microsoft_esi",
+      "name": "Microsoft Enterprise Skills Initiative",
+      "type": "google_news_query",
+      "category": "official_program",
+      "trust_tier": "official",
+      "query": "Microsoft Enterprise Skills Initiative exam discount certification voucher"
+    },
+    {
+      "id": "gn_microsoft_techcommunity",
+      "name": "Microsoft Tech Community Skills Hub",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "site:techcommunity.microsoft.com certification voucher OR exam discount OR free exam"
+    },
+    {
+      "id": "gn_microsoft_cert_support",
+      "name": "Microsoft training and certification support forum",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "site:trainingsupport.microsoft.com certification voucher OR exam discount"
+    },
+    {
+      "id": "gn_powerplatform_community",
+      "name": "Power Platform Community",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "site:community.powerplatform.com certification voucher OR exam discount OR challenge"
+    },
+    {
+      "id": "gn_powerbi_community",
+      "name": "Power BI Community",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "site:community.fabric.microsoft.com PL-300 voucher OR certification discount"
+    },
+    {
+      "id": "gn_fabric_community",
+      "name": "Microsoft Fabric Community",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "site:community.fabric.microsoft.com certification exam voucher OR discount"
+    },
+    {
+      "id": "gn_dynamics_community",
+      "name": "Dynamics 365 community discussions",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "Dynamics 365 certification exam voucher discount community discussion"
+    },
+    {
+      "id": "gn_reddit_azure",
+      "name": "Reddit Azure Certification discussions",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "site:reddit.com/r/AzureCertification Microsoft exam voucher OR discount OR free certification"
+    },
+    {
+      "id": "gn_reddit_powerbi",
+      "name": "Reddit Power BI discussions",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "site:reddit.com/r/PowerBI PL-300 voucher OR exam discount OR certification challenge"
+    },
+    {
+      "id": "gn_reddit_powerplatform",
+      "name": "Reddit Power Platform discussions",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "site:reddit.com/r/PowerPlatform Microsoft certification voucher OR exam discount"
+    },
+    {
+      "id": "gn_reddit_o365",
+      "name": "Reddit Microsoft certification discussions",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "site:reddit.com/r/O365Certification Microsoft exam voucher OR discount"
+    },
+    {
+      "id": "gn_reddit_microsoftlearn",
+      "name": "Reddit Microsoft Learn discussions",
+      "type": "google_news_query",
+      "category": "community",
+      "trust_tier": "community",
+      "query": "site:reddit.com Microsoft Learn challenge exam voucher certification 2026"
+    },
+    {
+      "id": "reddit_azure_vouchers",
+      "name": "Reddit r/AzureCertification voucher search",
+      "type": "reddit_search",
+      "category": "community",
+      "trust_tier": "community",
+      "subreddit": "AzureCertification",
+      "query": "voucher OR discount OR free exam"
+    },
+    {
+      "id": "reddit_powerbi_vouchers",
+      "name": "Reddit r/PowerBI voucher search",
+      "type": "reddit_search",
+      "category": "community",
+      "trust_tier": "community",
+      "subreddit": "PowerBI",
+      "query": "PL-300 voucher OR exam discount"
+    },
+    {
+      "id": "reddit_powerplatform_vouchers",
+      "name": "Reddit r/PowerPlatform voucher search",
+      "type": "reddit_search",
+      "category": "community",
+      "trust_tier": "community",
+      "subreddit": "PowerPlatform",
+      "query": "certification voucher OR exam discount"
+    },
+    {
+      "id": "reddit_o365_vouchers",
+      "name": "Reddit r/O365Certification voucher search",
+      "type": "reddit_search",
+      "category": "community",
+      "trust_tier": "community",
+      "subreddit": "O365Certification",
+      "query": "Microsoft exam voucher OR discount"
+    },
+    {
+      "id": "gn_pl300",
+      "name": "PL-300 exam voucher and discount searches",
+      "type": "google_news_query",
+      "category": "certification_search",
+      "trust_tier": "search_lead",
+      "query": "PL-300 exam voucher discount offer India"
+    },
+    {
+      "id": "gn_powerplatform_exam",
+      "name": "Power Platform certification exam offers",
+      "type": "google_news_query",
+      "category": "certification_search",
+      "trust_tier": "search_lead",
+      "query": "Power Platform certification exam voucher discount India"
+    },
+    {
+      "id": "gn_dynamics_exam",
+      "name": "Dynamics 365 certification exam offers",
+      "type": "google_news_query",
+      "category": "certification_search",
+      "trust_tier": "search_lead",
+      "query": "Dynamics 365 certification exam voucher discount India"
+    },
+    {
+      "id": "gn_azure_exam",
+      "name": "Azure certification exam offers",
+      "type": "google_news_query",
+      "category": "certification_search",
+      "trust_tier": "search_lead",
+      "query": "Azure certification exam voucher discount India"
+    },
+    {
+      "id": "gn_microsoft_cert_india",
+      "name": "Microsoft certification discounts in India",
+      "type": "google_news_query",
+      "category": "regional",
+      "trust_tier": "search_lead",
+      "query": "Microsoft certification exam discount voucher India eligibility"
+    },
+    {
+      "id": "gn_training_partners",
+      "name": "Microsoft training partner campaigns",
+      "type": "google_news_query",
+      "category": "training_provider",
+      "trust_tier": "search_lead",
+      "query": "Microsoft authorized training partner certification exam voucher discount"
+    },
+    {
+      "id": "gn_coursera_microsoft",
+      "name": "Course-linked Microsoft certification offers",
+      "type": "google_news_query",
+      "category": "training_provider",
+      "trust_tier": "search_lead",
+      "query": "Microsoft certification exam voucher Coursera training discount"
+    },
+    {
+      "id": "gn_datacamp_microsoft",
+      "name": "Training provider Microsoft certification campaigns",
+      "type": "google_news_query",
+      "category": "training_provider",
+      "trust_tier": "search_lead",
+      "query": "Microsoft certification voucher training provider campaign exam discount"
+    },
+    {
+      "id": "gn_exam_rebate",
+      "name": "Microsoft exam rebate and savings offers",
+      "type": "google_news_query",
+      "category": "aggregator",
+      "trust_tier": "search_lead",
+      "query": "Microsoft certification exam rebate savings voucher promotion"
+    },
+    {
+      "id": "gn_cert_challenge",
+      "name": "Microsoft certification challenges",
+      "type": "google_news_query",
+      "category": "campaign",
+      "trust_tier": "search_lead",
+      "query": "Microsoft Learn certification challenge exam voucher 2026"
+    },
+    {
+      "id": "gn_fabric_challenge",
+      "name": "Microsoft Fabric community challenges",
+      "type": "google_news_query",
+      "category": "campaign",
+      "trust_tier": "search_lead",
+      "query": "Microsoft Fabric challenge certification exam voucher discount"
+    },
+    {
+      "id": "gn_expiry",
+      "name": "Voucher expiry and redemption terms",
+      "type": "google_news_query",
+      "category": "validity",
+      "trust_tier": "search_lead",
+      "query": "Microsoft certification voucher expiration redemption deadline exam discount"
+    }
+  ]
+}
