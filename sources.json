@@ -1,12 +1,14 @@
 {
   "version": 1,
   "description": "Seed sources and search targets for the Microsoft certification voucher monitor. Results are leads, not confirmed offers.",
+
   "settings": {
     "language": "en-IN",
     "country": "IN",
     "max_results_per_source": 30,
-    "max_registry_examples_per_source": 5,
-    "max_candidate_sources": 500
+    "max_candidate_sources": 500,
+    "max_age_days": 183,
+    "include_undated": false
   },
   "sources": [
     {
