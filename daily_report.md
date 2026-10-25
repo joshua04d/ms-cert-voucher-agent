@@ -1,6 +1,6 @@
 # Microsoft Certification Voucher Monitor
 
-Checked: 2026-10-24 19:01 UTC
+Checked: 2026-10-25 08:43 UTC
 Searches with results: 8/8
 Publication window: last 183 days
 Undated results included: False
