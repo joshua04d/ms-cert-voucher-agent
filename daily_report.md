@@ -1,13 +1,15 @@
 # Microsoft Certification Voucher Monitor
 
-Checked: 2026-11-25 13:29 UTC
-Searches with results: 7/8
+Checked: 2026-11-26 13:09 UTC
+Searches with results: 0/8
 Publication window: last 183 days
 Undated results included: False
 Potential opportunities found: 0
 New opportunities: 0
 
 > Search results are leads, not confirmed discounts. Verify eligibility, voucher expiry, exam applicability, and India availability on the original source before acting.
+
+Search feeds returned no usable results. This does not mean no offers exist. Check the GitHub Actions workflow logs.
 
 No new potential opportunities detected today.
 
